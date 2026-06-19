@@ -1,0 +1,10 @@
+<h1>一覧ページ</h1>
+<% @users.each do |user| %>
+    <%= link_to "詳細ページ", user_path(user.id) %>
+<div>
+<p>名前: <%= user.first_name %></p>
+<p>苗字: <%= user.family_name %></p>
+</div>
+<hr>
+<% end %>
+<%= link_to "登録ページ", users_new_path %>
